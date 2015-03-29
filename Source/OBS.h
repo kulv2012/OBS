@@ -763,7 +763,7 @@ private:
     int     renderFrameX, renderFrameY; // The offset of the preview inside the preview control
     int     renderFrameCtrlWidth, renderFrameCtrlHeight; // The size of the entire preview control
     int     oldRenderFrameCtrlWidth, oldRenderFrameCtrlHeight; // The size of the entire preview control before the user began to resize the window
-    HWND    hwndRenderMessage; // The text in the middle of the main window
+    HWND    hwndRenderMessage; // The text in the middle of the main window. "尚未进行串流\n\n点击\"开始串流\"、\"开始录制\"或者\"预览串流\"开始"
     bool    renderFrameIn1To1Mode;
     int     borderXSize, borderYSize;
     int     clientWidth, clientHeight;

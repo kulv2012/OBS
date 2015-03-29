@@ -31,8 +31,8 @@
 
 //----------------------------
 
-HWND        hwndMain        = NULL;
-HWND        hwndRenderFrame = NULL;
+HWND        hwndMain        = NULL;//主窗口
+HWND        hwndRenderFrame = NULL;//视频渲染窗框
 HWND        hwndLogWindow   = NULL;
 HWND        hwndLog         = NULL;
 HINSTANCE   hinstMain       = NULL;

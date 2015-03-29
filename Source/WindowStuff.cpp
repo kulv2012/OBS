@@ -3819,7 +3819,7 @@ LRESULT CALLBACK OBS::OBSProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
 
                 case ID_STARTSTOP:
                     App->RefreshStreamButtons(true);
-                    App->ToggleCapturing();
+					App->ToggleCapturing();
                     App->RefreshStreamButtons();
                     break;
 

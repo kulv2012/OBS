@@ -175,7 +175,9 @@
       <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(OutDir)$(ProjectName).exe rundir</Command>
+      <Command>copy $(OutDir)$(ProjectName).exe rundir
+cd $(LocalDebuggerWorkingDirectory) &amp;&amp; .\copydebug64.bat</Command>
+      <Message>copy $(OutDir)$(ProjectName).exe rundir</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

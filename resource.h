@@ -29,6 +29,7 @@
 #define IDD_RECONNECTING                131
 #define IDD_SETTINGS_ADVANCED           132
 #define IDR_MAINMENU                    133
+#define IDR_MAINMENU_BK                 133
 #define IDD_CONFIGURETRANSITIONSOURCE   135
 #define IDD_BUILDINGMP4                 137
 #define IDD_CONFIGURETEXTSOURCE         139

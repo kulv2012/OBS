@@ -218,7 +218,7 @@ OBS::OBS()
     wc.lpfnWndProc = (WNDPROC)OBSProc;
     wc.hIcon = LoadIcon(hinstMain, MAKEINTRESOURCE(IDI_ICON1));
     wc.hbrBackground = (HBRUSH)COLOR_WINDOW;
-    wc.lpszMenuName = MAKEINTRESOURCE(IDR_MAINMENU);
+    //wc.lpszMenuName = MAKEINTRESOURCE(IDR_MAINMENU);//kulv: 不要菜单
 
     if(!RegisterClass(&wc))
         CrashError(TEXT("Could not register main window class"));
@@ -291,12 +291,11 @@ OBS::OBS()
     if(!hwndMain)
         CrashError(TEXT("Could not create main window"));
 
-    hmenuMain = GetMenu(hwndMain);
-    LocalizeMenu(hmenuMain);
+    //hmenuMain = GetMenu(hwndMain);
+    //LocalizeMenu(hmenuMain);
 
     //-----------------------------------------------------
-    // render frame
-
+    // render frame 视频渲染窗口
     hwndRenderFrame = CreateWindow(OBS_RENDERFRAME_CLASS, NULL,
         WS_CHILDWINDOW | WS_VISIBLE | WS_CLIPCHILDREN,
         0, 0, 0, 0,
@@ -362,7 +361,7 @@ OBS::OBS()
 
     //-----------------------------------------------------
     // render frame text
-
+	//"尚未进行串流\n\n点击\"开始串流\"、\"开始录制\"或者\"预览串流\"开始"
     hwndRenderMessage = CreateWindow(TEXT("STATIC"), Str("MainWindow.BeginMessage"),
         WS_CHILDWINDOW|WS_VISIBLE|WS_CLIPSIBLINGS|SS_CENTER,
         0, 0, 0, 0, hwndRenderFrame, NULL, hinstMain, NULL);
